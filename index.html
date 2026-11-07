@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131c">
+  <title>BerryHop — your web launchpad</title>
+  <style>
+    :root{color-scheme:dark;--bg:#10131c;--panel:#191d29;--line:#2a3040;--muted:#a1a9bd;--pink:#ff6e9f;--violet:#a98bff;--white:#f6f7fb}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 8%,#292044 0,transparent 34%),var(--bg);color:var(--white);font:16px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    .shell{width:min(1040px,calc(100% - 36px));margin:0 auto;padding:23px 0 52px}.top{display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font-weight:760;font-size:20px;letter-spacing:-.5px}.logo{display:grid;place-items:center;width:37px;height:37px;border-radius:13px;background:linear-gradient(135deg,var(--pink),#ffae79);color:#271526;font-size:21px;box-shadow:0 5px 24px #ff6e9f42}.badge{color:#cad0df;background:#ffffff0c;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:12px}
+    .hero{text-align:center;padding:76px 0 48px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#c1aaff;font-weight:700}.hero h1{font-size:clamp(38px,7vw,64px);line-height:1.04;letter-spacing:-2.8px;margin:13px 0 14px}.hero h1 span{background:linear-gradient(90deg,#ff84ad,#bc9dff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);margin:0 auto 29px;max-width:540px}
+    .search{display:flex;align-items:center;gap:12px;max-width:690px;margin:auto;padding:9px 10px 9px 17px;border:1px solid #45415a;border-radius:17px;background:#1a1c29;box-shadow:0 18px 60px #0005,0 0 0 5px #ffffff05}.search svg{flex:none;color:#b8adcf}.search input{width:100%;border:0;outline:0;background:transparent;color:var(--white);font:inherit;font-size:16px}.search input::placeholder{color:#8991a5}.search button{border:0;border-radius:11px;background:linear-gradient(110deg,var(--pink),#d49aff);color:#291629;font-weight:750;padding:12px 17px;font:inherit;cursor:pointer;white-space:nowrap}.search button:hover{filter:brightness(1.08)}.hint{font-size:12px;color:#8790a5;margin-top:12px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;margin:0 0 14px}.section-head h2{font-size:17px;margin:0;letter-spacing:-.3px}.section-head span{font-size:12px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.tile{display:flex;align-items:center;gap:13px;text-decoration:none;color:inherit;padding:15px;border-radius:16px;border:1px solid var(--line);background:linear-gradient(145deg,#1c202d,#171b26);transition:transform .16s,border-color .16s,background .16s}.tile:hover{transform:translateY(-2px);border-color:#64517c;background:#222333}.icon{display:grid;place-items:center;width:43px;height:43px;flex:none;border-radius:13px;background:#ffffff0d;font-size:22px}.tile strong{display:block;font-size:14px}.tile small{display:block;color:var(--muted);font-size:11px;margin-top:2px}.arrow{margin-left:auto;color:#7d8598;font-size:16px}.info{display:flex;gap:13px;align-items:flex-start;margin-top:27px;padding:16px 18px;border:1px solid #333348;border-radius:15px;background:#171923b8;color:#c6cada;font-size:12px}.info .i{font-size:16px}.info p{margin:0}.info strong{color:#f3eefa}.foot{display:flex;justify-content:space-between;color:#717b92;font-size:11px;margin-top:27px}.foot a{color:#9ca6bc;text-decoration:none}.foot a:hover{color:white}
+    @media(max-width:680px){.hero{padding:62px 0 38px}.grid{grid-template-columns:repeat(2,1fr)}.tile{padding:12px;gap:10px}.badge{font-size:11px}.hero h1{letter-spacing:-1.8px}.foot{gap:15px;flex-direction:column}}
+    @media(max-width:380px){.grid{grid-template-columns:1fr}.search{gap:8px;padding-left:12px}.search button{padding:10px 12px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="top"><div class="brand"><span class="logo">✿</span><span>BerryHop</span></div><span class="badge">A little launchpad for the web</span></header>
+    <section class="hero" aria-labelledby="title">
+      <div class="eyebrow">Your next click starts here</div>
+      <h1 id="title">Hello, <span>internet.</span></h1>
+      <p>Search the web or jump straight to a favorite. BerryHop works on phones, tablets, and computers.</p>
+      <form class="search" id="searchForm" role="search">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.4 4.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <input id="query" type="search" placeholder="Search anything with Brave…" aria-label="Search the web" autocomplete="off">
+        <button type="submit">Search ↗</button>
+      </form>
+      <div class="hint">Press Enter to search · results open in a new tab</div>
+    </section>
+    <section aria-labelledby="favorites">
+      <div class="section-head"><h2 id="favorites">Quick picks</h2><span>Tap one to open</span></div>
+      <div class="grid">
+        <a class="tile" href="https://www.google.com/search?q=Drive+Mad+game" target="_blank" rel="noopener noreferrer"><span class="icon">🚙</span><span><strong>Drive Mad</strong><small>Find the game</small></span><span class="arrow">↗</span></a>
+        <a class="tile" href="https://www.google.com/search?q=BitLife+game" target="_blank" rel="noopener noreferrer"><span class="icon">🎲</span><span><strong>BitLife</strong><small>Find the game</small></span><span class="arrow">↗</span></a>
+        <a class="tile" href="https://www.google.com/search?q=Moto+game" target="_blank" rel="noopener noreferrer"><span class="icon">🏍️</span><span><strong>Moto games</strong><small>Find a game</small></span><span class="arrow">↗</span></a>
+        <a class="tile" href="https://www.roblox.com/" target="_blank" rel="noopener noreferrer"><span class="icon">🟥</span><span><strong>Roblox</strong><small>Official website</small></span><span class="arrow">↗</span></a>
+        <a class="tile" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><span class="icon">▶️</span><span><strong>YouTube</strong><small>Videos and music</small></span><span class="arrow">↗</span></a>
+        <a class="tile" href="https://discord.com/" target="_blank" rel="noopener noreferrer"><span class="icon">💬</span><span><strong>Discord</strong><small>Chat and communities</small></span><span class="arrow">↗</span></a>
+        <a class="tile" href="https://search.brave.com/" target="_blank" rel="noopener noreferrer"><span class="icon">🦁</span><span><strong>Brave Search</strong><small>Search the web</small></span><span class="arrow">↗</span></a>
+        <a class="tile" href="https://www.google.com/search?q=free+browser+games" target="_blank" rel="noopener noreferrer"><span class="icon">🎮</span><span><strong>More games</strong><small>Browse game picks</small></span><span class="arrow">↗</span></a>
+      </div>
+    </section>
+    <aside class="info"><span class="i">ⓘ</span><p><strong>About this page</strong><br>BerryHop is a lightweight website that helps you search and open other sites. Your search goes to Brave Search, and each shortcut opens its destination in a new tab. It does not proxy or embed other websites, so some sites may ask you to sign in or may not work in an embedded view.</p></aside>
+    <footer class="foot"><span>Made for exploring 🌸</span><a href="https://search.brave.com/" target="_blank" rel="noopener noreferrer">Search powered by Brave Search</a></footer>
+  </main>
+  <script>
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const query = document.getElementById('query').value.trim();
+      if (!query) { document.getElementById('query').focus(); return; }
+      window.open('https://search.brave.com/search?q=' + encodeURIComponent(query), '_blank', 'noopener,noreferrer');
+    });
+  </script>
+</body>
+</html>
